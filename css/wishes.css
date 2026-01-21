@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+/* Fullscreen Video */
+.bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Message Box */
+.message-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  padding: 24px;
+  background: rgba(255,255,255,0.78);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  color: #000;
+  text-align: center;
+}
+
+.message-box h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  margin-bottom: 14px;
+}
+
+#typingText {
+  font-family: "Dancing Script", cursive;
+  font-size: 20px !important;       /* 🔥 increased size */
+  line-height: 1.8;
+  color: #111;
+}
+
+
+/* Read Button */
+#readBtn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: #ff4d6d;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Text */
+#typingText {
+    font-size: 20px;
+  margin-top: 10px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+/* Thank You Button */
+#thankBtn {
+  display: none;
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: #ff8fab;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* End Screen */
+.end-screen {
+  position: fixed;
+  inset: 0;
+  background: #ffc0cb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 50;
+}
+
+.end-screen h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 42px;
+  color: #c90000;
+}
+
+/* Show end screen */
+.end-screen.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .message-box {
+    width: 90%;
+    left: 50%;
+    right: auto;
+    bottom: 6%;
+    top: auto;
+    transform: translateX(-50%);
+  }
+}

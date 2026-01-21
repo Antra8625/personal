@@ -1,0 +1,104 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins, system-ui, sans-serif;
+}
+/* DESKTOP BACKGROUND (IGNORED VISUALLY) */
+body{
+  height:100vh;
+  background:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+/* MOBILE REEL CANVAS */
+.reel{
+  width:100vw;              /* mobile width */
+  height:100vh;             /* mobile height */
+  background: url("../assets/memory-bg.jpg") center/cover no-repeat;
+  border-radius:22px;
+  box-shadow:0 30px 80px rgba(0,0,0,.7);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding-top:26px;
+  color:white;
+  overflow:hidden;
+}
+/* TEXT */
+.reel h1{
+  color:#ff6ec7;
+  font-size:1.6rem;
+}
+.reel p{
+  font-size:13px;
+  opacity:.85;
+  margin-bottom:18px;
+}
+/* CARD STAGE */
+.card-stage{
+  position:relative;
+  width:350px;
+  height:60vh;
+  margin-top:10px;
+}
+/* CARD BASE */
+.card{
+  position:absolute;
+  inset:0;
+  border-radius:26px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 22px 55px rgba(204, 0, 255, 0.6);
+  touch-action: none;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+/* IMAGE */
+.card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+/* STACK DEPTH (MATCHES REEL) */
+.back-3{
+  transform:translate(28px,-14px);
+  opacity:.45;
+}
+.back-2{
+  transform:translate(18px,-9px);
+  opacity:.65;
+}
+.back-1{
+  transform:translate(9px,-4px);
+  opacity:.85;
+}
+.front{
+  box-shadow:
+    0 0 0 3px rgba(255,105,180,.9),
+    0 32px 70px rgba(255,0,150,.85);
+    filter: none !important;
+}
+/* HEARTS */
+.heart{
+  position:absolute;
+  top:12px;
+  font-size:17px;
+  color:#ff4d6d;
+  z-index:3;
+}
+.heart.left{ left:12px; }
+.heart.right{ right:12px; }
+/* BUTTON */
+button{
+  margin-top:auto;
+  margin-bottom:24px;
+  padding:15px 40px;
+  border:none;
+  border-radius:40px;
+  background:linear-gradient(135deg,#ff4dd8,#ff008c);
+  color:white;
+  font-size:15px;
+  box-shadow:0 10px 30px rgba(255,0,140,.6);
+}

@@ -1,0 +1,131 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ========== COMMON BACKGROUND (ALL PAGES) ========== */
+body.bg {
+  min-height: 100vh;
+  background: url("../assets/bg.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+}
+
+/* ========== CENTER LAYOUT ========== */
+.center {
+  margin-top: 100px;
+  text-align: center;
+  padding: 100px;
+  background: url("../assets/indexbg.jpg") center/cover no-repeat;
+}
+
+/* ========== START / SURPRISE PAGE ========== */
+.surprise-container {
+  text-align: center;
+  animation: fadeUp 1.5s ease;
+}
+
+/* Cute character / GIF */
+.character {
+  width: 160px;
+  margin-bottom: 20px;
+  animation: float 3s infinite ease-in-out;
+}
+
+/* Main heading */
+.title {
+  font-size: 28px;
+  line-height: 1.3;
+  color: #d88cff;
+  text-shadow: 0 0 12px rgba(216,140,255,0.6);
+}
+
+.title span {
+  color: #ff9adf;
+}
+
+/* Subtitle text */
+.subtitle {
+  font-size: 16px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* Button */
+.start-btn {
+  margin-top: 30px;
+  padding: 14px 42px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff4fd8, #a855f7);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255,79,216,0.6);
+  animation: glow 2s infinite;
+}
+
+/* ========== INDEX PAGE BUTTON ========== */
+.btn {
+  margin-top: 30px;
+  padding: 15px 40px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #ff4fd8, #a855f7);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255,79,216,0.6);
+}
+
+/* ========== COUNTDOWN VIDEO PAGE ========== */
+video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 15px #ff4fd8; }
+  50% { box-shadow: 0 0 30px #a855f7; }
+  100% { box-shadow: 0 0 15px #ff4fd8; }
+}
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 600px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .character {
+    width: 130px;
+  }
+
+  .start-btn {
+    font-size: 16px;
+    padding: 12px 30px;
+  }
+}

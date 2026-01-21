@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background:url("../assets/balloon-bg.jpg") center/cover no-repeat;
+  overflow: hidden;
+}
+
+.scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-text {
+  position: absolute;
+  top: 90px;
+  color: white;
+  font-size: 22px;
+  letter-spacing: 1px;
+  z-index: 10;
+}
+
+.reveal-text {
+  position: absolute;
+  top: 200px;
+  font-size: 42px;
+  font-weight: bold;
+  color: #fff;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: 0.6s ease;
+  z-index: 1;
+}
+
+.reveal-text.show {
+  opacity: 1;
+  transform: scale(2);
+}
+
+.balloon-row {
+  display: flex;
+  gap: 40px;
+  z-index: 5;
+}
+
+.balloon-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: float 3s ease-in-out infinite;
+}
+
+.balloon-wrap:nth-child(2){animation-delay:.3s}
+.balloon-wrap:nth-child(3){animation-delay:.6s}
+.balloon-wrap:nth-child(4){animation-delay:.9s}
+
+.balloon {
+  width: 10vw;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.balloon.pop {
+  transform: scale(1.5);
+  opacity: 0;
+}
+.show-memories {
+  position: absolute;
+  bottom: 60px;
+  padding: 14px 32px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff4fd8, #a855f7);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255,79,216,0.6);
+  animation: glow 2s infinite;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.7);
+  transition: 0.6s ease;
+}
+
+
+.show-memories.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.show-memories:hover {
+  transform: scale(1.08);
+}
+
+.reveal-text.show {
+  opacity: 1;
+  transform: scale(2);
+
+  /* ✨ GLOW EFFECT */
+  text-shadow:
+    0 0 10px #ff4fd8,
+    0 0 20px #ff4fd8,
+    0 0 40px #ff4fd8,
+    0 0 80px #a855f7;
+
+  animation: textGlow 2s infinite alternate;
+}
+.top-text {
+  text-shadow:
+    0 0 6px #ffffff,
+    0 0 14px #ffb6ff,
+    0 0 30px #ff4fd8;
+  animation: topGlow 2.5s infinite alternate;
+}
+
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
