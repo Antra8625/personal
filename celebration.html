@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Celebrate 🎉</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/celebration.css">
+</head>
+
+<body class="celebration-bg">
+
+  <!-- BACKGROUND MUSIC -->
+  <audio id="bgMusic" src="assets/music.mp3" loop></audio>
+
+  <!-- FAIRY LIGHTS -->
+  <img src="assets/fairy.png" class="fairy-lights">
+
+  <!-- EFFECT CONTAINERS -->
+  <div class="confetti"></div>
+  <div class="hearts"></div>
+  <div class="sparkles"></div>
+  <div class="balloons"></div>
+
+  <!-- CENTER CONTENT -->
+  <div class="celebration-container">
+   <svg class="birthday-text" viewBox="0 0 500 200" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <path id="curvePath" d="M 50 150 Q 250 20 450 150" />
+    </defs>
+
+    <text text-anchor="middle">
+      <textPath href="#curvePath" startOffset="50%">
+        HAPPY BIRTHDAY
+      </textPath>
+    </text>
+  </svg>
+
+
+    <!-- CAKE -->
+    <img src="assets/cake.png" class="cake" alt="Cake">
+
+    <!-- SINGLE BUTTON -->
+    <button class="celebrate-btn" id="mainBtn">
+      🎀 Decor
+    </button>
+
+  </div>
+
+  <!-- JS -->
+  <script src="js/celebration.js"></script>
+
+</body>
+</html>

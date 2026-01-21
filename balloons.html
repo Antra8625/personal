@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Balloons</title>
+  <link rel="stylesheet" href="css/balloons.css">
+</head>
+
+<body>
+
+<div class="scene">
+
+  <div class="top-text" id="topText">
+    Pop all 4 balloons
+  </div>
+
+  <!-- text behind balloons -->
+  <div class="reveal-text" id="revealText">
+    ℍ𝔸ℙℙ𝕐 𝔹𝕀ℝ𝕋ℍ𝔻𝔸𝕐
+  </div>
+
+  <div class="balloon-row">
+
+    <div class="balloon-wrap">
+      <img src="assets/balloon-pink.png" class="balloon" data-word="I">
+    </div>
+
+    <div class="balloon-wrap">
+      <img src="assets/balloon-green.png" class="balloon" data-word="Love">
+    </div>
+
+    <div class="balloon-wrap">
+      <img src="assets/balloon-yellow.png" class="balloon" data-word="You">
+    </div>
+
+    <div class="balloon-wrap">
+      <img src="assets/balloon-red.png" class="balloon" data-word="Chiku">
+    </div>
+
+  </div>
+  <!-- Show Memories Button -->
+<button 
+  id="showMemoriesBtn" class="show-memories">
+  💖 Show Memories
+</button>
+
+<audio id="popSound" src="assets/pop.mp3"></audio>
+
+</div>
+
+<script src="js/balloons.js"></script>
+</body>
+</html>
